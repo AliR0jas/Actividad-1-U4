@@ -1,0 +1,17 @@
+﻿
+@{ Layout = "_Layout"; }
+
+<main>
+    <form>
+        <h2 style="font-family:'Another Flight'">Datos del usuario.</h2>
+        <label>@User.Claims.FirstOrDefault(x => x.Type == "Nombre").Value</label><br />
+        <h2 style="font-family:'Another Flight'">Correo electrónico.</h2>
+        <label>@User.Claims.FirstOrDefault(x => x.Type == "Correo").Value</label><br />
+    </form>
+    <div>
+        <h2>Ajustes</h2>
+        <a href="~/Home/CambiarContra">Cambiar contraseña.</a><br />
+        <a href="~/Home/CerrarSesion">Cerrar sesión.</a><br />
+        <a href="~/Home/EliminarCuenta">Eliminar Cuenta.</a>
+    </div>
+</main>

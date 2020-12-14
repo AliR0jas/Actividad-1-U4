@@ -1,0 +1,15 @@
+﻿@model Actividad_1_U4.Models.Usuario
+@{ Layout = "_Layout"; }
+
+<main>
+    <h1 style="font-family:'Another Flight'">Activar cuenta</h1>
+    <form method="post" action="~/Home/Activar">
+        <p>Ingresa el código que haya recibido</p>
+        <input type="number" name="codigo" required />
+        <br />
+        <input type="submit" value="Activar" />
+        <br />
+        <label>Accede a tu correo electrónico para comprobar el código. <br />
+        Recuerda que si no activas tu cuenta, no podrás registrarte en nuestra plataforma.</label>
+    </form>
+</main>

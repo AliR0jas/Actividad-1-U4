@@ -1,0 +1,20 @@
+﻿
+@{ Layout = "_Layout"; }
+
+<main>
+    <h1 style="font-family:'Another Flight'">Eliminar cuenta</h1>
+    <label>¿Está seguro de eliminar su cuenta?</label>
+    <a href="~/Home/Index">
+        <label>
+            Regresar.
+        </label>
+    </a>
+    <form method="post" action="~/Home/EliminarCuenta">
+        <input type="text" name="correo" value="@User.Claims.FirstOrDefault(x=>x.Type == "Correo").Value" style="visibility:hidden" /><br />
+        <input type="password" name="contra" placeholder="Contraseña" required />
+        <br />
+        @Html.ValidationSummary()
+        <input type="submit" value="Eliminarla permanentemente."/><br />
+        <p>Recuerda que los cambios son irreversibles.</p><br />
+    </form>
+</main>

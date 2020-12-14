@@ -1,0 +1,13 @@
+﻿@model Actividad_1_U4.Models.Usuario
+@{ Layout = "_Layout"; }
+
+<main>
+    <h1>Recuperar mi contraseña.</h1>
+    <form method="post" action="~/Home/RecuperarContra">
+        <h1 style="font-family:'Another Flight'">Introduzca el que correo electrónico utilizado en la cuenta.</h1>
+        <input type="email" name="correo" placeholder="correo electrónico" style="margin:10px" required />
+        <br />
+        <input type="submit" value="Recuperar Contraseña"/><br />
+        <p>Se le enviará un correo donde podrá recuperar su contraseña.</p><br />
+    </form>
+</main>
